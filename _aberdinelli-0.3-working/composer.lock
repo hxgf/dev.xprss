@@ -1,0 +1,63 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "bf97baf1fa180971d81ea45dfe437769",
+    "packages": [
+        {
+            "name": "hxgf/xprss",
+            "version": "0.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hxgf/xprss.git",
+                "reference": "7f6c8f5602912af00af221d0bce21cd0271dd8f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hxgf/xprss/zipball/7f6c8f5602912af00af221d0bce21cd0271dd8f6",
+                "reference": "7f6c8f5602912af00af221d0bce21cd0271dd8f6",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "XPRSS\\": [
+                        "src/XPRSS/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Youngblood",
+                    "email": "jy@hxgf.io"
+                }
+            ],
+            "description": "Fast, unopinionated, minimalist web framework for PHP",
+            "keywords": [
+                "framework"
+            ],
+            "support": {
+                "issues": "https://github.com/hxgf/xprss/issues",
+                "source": "https://github.com/hxgf/xprss/tree/0.0.3"
+            },
+            "time": "2022-04-19T19:36:12+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "hxgf/xprss": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.2.0"
+}
