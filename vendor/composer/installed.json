@@ -1,5 +1,51 @@
 {
-    "packages": [],
+    "packages": [
+        {
+            "name": "hxgf/xprss",
+            "version": "0.0.3",
+            "version_normalized": "0.0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hxgf/xprss.git",
+                "reference": "7f6c8f5602912af00af221d0bce21cd0271dd8f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hxgf/xprss/zipball/7f6c8f5602912af00af221d0bce21cd0271dd8f6",
+                "reference": "7f6c8f5602912af00af221d0bce21cd0271dd8f6",
+                "shasum": ""
+            },
+            "time": "2022-04-19T19:36:12+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "XPRSS\\": [
+                        "src/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Youngblood",
+                    "email": "jy@hxgf.io"
+                }
+            ],
+            "description": "Fast, unopinionated, minimalist web framework for PHP",
+            "keywords": [
+                "framework"
+            ],
+            "support": {
+                "issues": "https://github.com/hxgf/xprss/issues",
+                "source": "https://github.com/hxgf/xprss/tree/0.0.3"
+            },
+            "install-path": "../hxgf/xprss"
+        }
+    ],
     "dev": true,
     "dev-package-names": []
 }

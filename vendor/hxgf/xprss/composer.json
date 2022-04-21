@@ -1,0 +1,18 @@
+{
+	"name": "hxgf/xprss",
+	"description": "Fast, unopinionated, minimalist web framework for PHP",
+	"type": "library",
+  "license": "MIT",
+	"authors": [
+		{
+      "name": "Jonathan Youngblood",
+      "email": "jy@hxgf.io"
+		}
+	],
+	"keywords": ["framework"],
+	"autoload": {
+		"psr-4": {
+			"XPRSS\\": ["src/"]
+		}
+	}
+}
