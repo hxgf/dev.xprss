@@ -1,27 +1,28 @@
 <?php
 include __DIR__.'/vendor/autoload.php';
 
-use XPRSS\XPRSS;
+use XPRSS\Application;
 use XPRSS\Router;
 
-$xprss = new XPRSS();
-$app = new Router();
-
-// $xprss->set('view engine','php');
-// $xprss->set('views','./views');
-// $xprss->set('allow_php',true);
-
-
+$app = new Application();
+$router = new Router();
 
 // The complete request info can be var_dumped calling getInfo():
-// $xprss->getInfo();
+$app->getInfo();
 
 /**
  * Here you have a few common usages for XPRSS
  */
 
+
+// hello world
+$router->get('/', function($req, $res) {
+	$res->send('<h1>Hello Cleveland!</h1>');
+});
+
+
 // Handle $_POST variables
-$app->post('/', function($req, $res) {
+$router->post('/', function($req, $res) {
 	$res->json(array(
 		'name'	=> $req->body->name
 	));
@@ -29,36 +30,28 @@ $app->post('/', function($req, $res) {
 
 
 
-
-$app->get('/', function($req, $res) {
-	$res->send('<h1>Hello Cleveland!</h1>');
-  // $res->render('what.php', array(
-  //   'what' => 'you know what'
-  // ));
-});
-
 // Handle $_GET variables in /page path, for example /path?name=Alan
-$app->get('/path', function($req, $res) {
+$router->get('/path', function($req, $res) {
 	$res->send('Hi, '.$req->query->name);
 });
 
 // Handle dynamic URL
-$app->get('/:page', function($req, $res) {
+$router->get('/:page', function($req, $res) {
 	$res->send('You are visiting '.$req->params->page.'!');
 });
 
 // You can handle nested dynamic paths:
-$app->get('/:author/:id', function($req, $res) {
+$router->get('/:author/:id', function($req, $res) {
 	$res->send('You are visiting the post id: '.$req->params->id.' by '.$req->params->author);
 });
 
 // You can even use regex
-$app->get('/([0-9]{4})-word', function($req, $res) {
+$router->get('/([0-9]{4})-word', function($req, $res) {
 	// For example, here we want 4 numbers and then "-word"
 });
 
 // You have a few useful helpers for cookies
-$app->get('/cookie', function($req, $res) {
+$router->get('/cookie', function($req, $res) {
 	// Get a cookie named "username"
 	$name = $req->cookies->username;
 
@@ -70,7 +63,7 @@ $app->get('/cookie', function($req, $res) {
 });
 
 // And for redirections, too
-$app->get('/redirect', function($req, $res) {
+$router->get('/redirect', function($req, $res) {
 	// Using Location header
 	$res->location('/other-page');
 
@@ -84,5 +77,5 @@ $app->get('/redirect', function($req, $res) {
 /**
  * listen() must receive an instance of Router to work.
  */
-$xprss->listen($app);
+$app->listen($router);
 ?>

@@ -20,7 +20,7 @@ const REGEX_VAR = '/:([a-zA-Z_\-0-9]+)\//i';
 const REGEX_VAR_URL = '([a-zA-Z0-9_\-@]+)/';
 
 
-class XPRSS
+class Application
 {
 	/**
 	 * The url we are handling (the value in the ?route querystring sent by htaccess)
